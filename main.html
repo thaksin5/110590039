@@ -1,76 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Webpage</title>
-    <style>
-      div.a{
-        margin: 60px; <!-- limit text area -->
-        width: 80%;
-        text-align: justify;
-      }
-      p{
-        font-style:normal;
-        color:DarkBlue;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-        <br>
-        <div class="a">
-          <img src="https://www.ntut.edu.tw/var/file/7/1007/pictures/5/m/mczh-tw1920x700_large14589_305281847437.jpg" alt="logo" width='150'>
-          <img src="https://www.ntut.edu.tw/var/file/7/1007/pictures/5/m/mczh-tw1920x700_large14589_305281847437.jpg" alt="logo" width='150'>
-          <img src="https://www.ntut.edu.tw/var/file/7/1007/pictures/5/m/mczh-tw1920x700_large14589_305281847437.jpg" alt="logo" width='150'>
-        </div>
-    </header>
+   <head>
+     <style>
+       .table{
+           width: 100%;
+           display: table;
+       }
+       .container{
+           display: table-row;
+           height: 100px;
+           background: rgb(0, 225, 128);
+       }
+       .left{
+           width: 50%;
+           display: table-cell;
+       }
+       .right{
+           display: table-cell;
+       }
+       .open{
+         font-style: italic;
+       }
+       h3, p{
+         margin-left: 40px;
+         width:90%;
+         font-family: Arial;
 
-    <main>
-      <div class="a">
-        <section class='intro'>
-          <h2 style='margin-top: -45px;'>Introduction</h2>
-          <p>
-            Taipei Tech campus is located at the apex of the Taipei Metro system. Not only can students enjoy a world-class
-            education at Taipei Tech, but they also gain the opportunity to enjoy the rich traditional culture that Taipei offers.
-            Attractions such as Taipei 101, the Palace Museum, and the Chiang Kai-shek Memorial Hall are in close
-            proximity to Taipei Tech.
-          </p>
-        </section>
+       }
+       .img{
+         width: 300px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+       }
+     </style>
+   </head>
+   <body>
+     <header><center><h1 style="font-style:italic;">About me</h1></center></header>
 
-        <section class='history'>
-          <h4>History & Philosophy</h4>
-          <article class="p1">
-            <p>
-              Established in 1912, Taipei Tech is among one of the oldest universities in Taiwan. It was <b style='color:Black'><i>1<sup>st</sup></i></b>
-               established during the Japanese Colonial Period as the Auxiliary Industrial Institute of the Education Affairs Office of the Civil
-              Administration Department. The Institute consisted of only three departments (Woodcraft, Metalwork and
-              Electrical Engineering) ushered in an era of industrial education in Taiwan.
-            </p>
-          </article>
+      <div class="table">
+          <div class = "container">
+              <div class="left">
+                <div class="personal">
+                    <h3><u>Personal information</u></h3>
+                    <p><b>Name : </b>張塔信</p>
+                    <p><b>Age : </b>19</p>
+                    <p><b>Sex : </b>male</p>
+                    <p><b>Education : </b>National Taipei University of Technology</p>
+                    <p><b>Email : </b><a href="https://www.ntut.edu.tw/" target="_blank" title="My Email">t110590039@ntut.org.tw</a></p>
+                </div>
+                <div class="school-webpage">
+                    <a href="https://www.ntut.edu.tw/" target="_blank">
+                      <img class="img" src="https://www.ntut.edu.tw/var/file/7/1007/pictures/5/m/mczh-tw1920x700_large14589_305281847437.jpg" title="School Website">
+                    </a>
+                    <hr color="white">
+                </div>
+                <div class="history" style="line-height:25px;">
+                    <p><b>National Taipei University of Technology (NTUT, Taipei Tech; Chinese: 國立臺北科技大學)</b> is a public university in Taipei, Taiwan. It is a member of the Global Research & Industry Alliance (Gloria) of the Ministry of Science and Technology and accredited by AACSB. Located in the Daan district of Taipei, the school was established in 1912 as the School of Industrial Instruction, one of the earliest intermediate-higher educational institute in Taiwan.</p>
+                </div>
+              </div>
+              <div class="right">
+                <div class="My favourite hobby">
+                  <h3><u>My favourite hobby</u></h3>
+                  <p>I love to play video games and listening to music in my freetime, sometime I go out play football with my friends.</p>
+                  <p>My favourite song.</p>
+                  <a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">
+                    <img class="img" src="data:image/png;base64,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" title="My favourite song">
+                    <hr color="white">
+                  </a>
 
-          <article class="p2">
-            <p>
-              With the long-standing history and experience in education, Taipei Tech devotes to cultivating top technical
-              professionals. Taipei Tech specializes in three fields: technology, design and management. In a recent teaching
-              excellence evaluation by Taiwan’s Ministry of Education, Taipei Tech was ranked first among all the other
-              technological universities. It is also Number One Paradigm Technological University for its research and academic
-              excellence. Taipei Tech alumni have contributed considerably to the economic development of Taiwan, and have
-              won wide praise from businesses of all industries.
-            </p>
-          </article>
-        </section>
-        <hr>
+                  <p style="line-height:25px;">"Shut Down" is a song by South Korean girl group Blackpink that was released on September 16, 2022, through YG Entertainment and Interscope Records as the second single of the group's second studio album, Born Pink.[1] Described as a hip hop-based track with strings, the song was written by Teddy, Danny Chung, and Vince and composed by Teddy and 24.
+
+      "Shut Down" was a commercial success and became Blackpink's second number-one hit on the Billboard Global 200. It topped the charts in Hong Kong, Indonesia, Malaysia, Philippines, Singapore, and Taiwan and entered the top ten in Australia, Canada, New Zealand, and South Korea.</p>
+                </div>
+
+              </div>
+          </div>
       </div>
-    </main>
-
-    <footer>
-      <div class="a">
-        <h4 style='margin-top: -45px;'>Taipei Tech graduates</h4> <!-- margin-top: limit how far from the top -->
-        <p>
-          Taipei Tech graduates are the top favorite employees among Taiwan’s top 1000 enterprises, as declared by Cheers
-          magazine. Taipei Tech is also renowned as top World Green University. In UI Green Metrics University Rankings,
-          Taipei Tech is ranked as the 1st Green University in Taiwan and the 6th in world in the city center catergory.
-        </p>
-      </div>
-    </footer>
-  </body>
+   </body>
 </html>
+<!--
+    td = table cell
+    we can use "table" divide left and right
+-->
