@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <style>
+       .table{
+           width: 100%;
+           display: table;
+       }
+       .container{
+           display: table-row;
+           height: 100px;
+           background: rgb(0, 225, 128);
+       }
+       .left{
+           width: 50%;
+           display: table-cell;
+       }
+       .right{
+           display: table-cell;
+       }
+       .open{
+         font-style: italic;
+       }
+       h3, p{
+         margin-left: 40px;
+         width:90%;
+         font-family: Arial;
+
+       }
+       .link{
+         list-style-type: none;
+         margin-left: 40px;
+         padding: 0;
+         overflow: hidden;
+         border: 1px solid #e7e7e7;
+       }
+       .img{
+         width: 300px;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+       }
+       ul {
+         list-style-type: none;
+         margin: 0 auto;
+         padding: 0;
+         overflow: hidden;
+         background-color: #594545;
+         width: 54.5%
+       }
+
+       li {
+         float: left;
+         border-right:1px solid #bbb;
+         padding-left:auto;
+       }
+
+       li:last-child {
+         border-right: none;
+       }
+
+       li a {
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         color: #FFF8EA;
+       }
+
+       li a:hover:not(.active) {
+         background-color: #9E7676;
+       }
+        .pics{
+             width=60px;
+             border-radius: 50%;
+        }
+     </style>
+   </head>
+   <body>
+     <header><center><h1 style="font-style:italic;">About me</h1></center></header>
+     <ul style="font-family: Arial;">
+       <li><a href="http://127.0.0.1:3000/playgraound.html" target="_blank">Home</a></li>
+       <li><a href="http://127.0.0.1:3000/playgraound.html" target="_blank">News</a></li>
+       <li><a href="http://127.0.0.1:3000/playgraound.html" target="_blank">About</a></li>
+       <li><a href="http://127.0.0.1:3000/playgraound.html" target="_blank">History</a></li>
+       <li><a href="http://127.0.0.1:3000/playgraound.html" target="_blank">Program</a></li>
+     </ul>
+
+      <div class="table">
+        <img class="pics" src="channels1_profile.jpg">
+          <div class = "container">
+              <div class="left">
+                <div class="personal">
+                    <h3><u>Personal information</u></h3>
+                    <p><b>Name : </b>張塔信</p>
+                    <p><b>Age : </b>19</p>
+                    <p><b>Sex : </b>male</p>
+                    <p><b>Education : </b>National Taipei University of Technology</p>
+                    <p><b>Email : </b><a href="https://www.ntut.edu.tw/" target="_blank" title="My Email">t110590039@ntut.org.tw</a></p>
+                </div>
+                <div class="school-webpage">
+                    <a href="https://www.ntut.edu.tw/" target="_blank">
+                      <img class="img" src="https://www.ntut.edu.tw/var/file/7/1007/pictures/5/m/mczh-tw1920x700_large14589_305281847437.jpg" title="School Website">
+                    </a>
+                    <hr color="white">
+                </div>
+                <div class="history" style="line-height:25px;">
+                    <p><b>National Taipei University of Technology (NTUT, Taipei Tech; Chinese: 國立臺北科技大學)</b> is a public university in Taipei, Taiwan. It is a member of the Global Research & Industry Alliance (Gloria) of the Ministry of Science and Technology and accredited by AACSB. Located in the Daan district of Taipei, the school was established in 1912 as the School of Industrial Instruction, one of the earliest intermediate-higher educational institute in Taiwan.</p>
+                </div>
+              </div>
+              <div class="right">
+                <div class="My favourite hobby">
+                  <h3><u>My favourite hobby</u></h3>
+                  <p>I love to play video games and listening to music in my freetime, sometime I go out play football with my friends.</p>
+                  <p>My favourite song.</p>
+                  <p>
+                      &#x2022;<a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">https://www.youtube.com/watch?v=POe9SOEKotk</a>
+                  </p>
+                  <p>
+                      &#x2022;<a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">https://www.youtube.com/watch?v=POe9SOEKotk</a>
+                  </p>
+                  <p>
+                      &#x2022;<a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">https://www.youtube.com/watch?v=POe9SOEKotk</a>
+                  </p>
+                  <p>
+                      &#x2022;<a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">https://www.youtube.com/watch?v=POe9SOEKotk</a>
+                  </p>
+                  <p>
+                      &#x2022;<a href="https://www.youtube.com/watch?v=POe9SOEKotk" target="_blank">https://www.youtube.com/watch?v=POe9SOEKotk</a>
+                  </p>
+                  <hr color="white">
+
+                  <p style="line-height:25px;">"Shut Down" is a song by South Korean girl group Blackpink that was released on September 16, 2022, through YG Entertainment and Interscope Records as the second single of the group's second studio album, Born Pink.[1] Described as a hip hop-based track with strings, the song was written by Teddy, Danny Chung, and Vince and composed by Teddy and 24.
+
+      "Shut Down" was a commercial success and became Blackpink's second number-one hit on the Billboard Global 200. It topped the charts in Hong Kong, Indonesia, Malaysia, Philippines, Singapore, and Taiwan and entered the top ten in Australia, Canada, New Zealand, and South Korea.</p>
+                </div>
+
+              </div>
+          </div>
+      </div>
+   </body>
+</html>
+<!--
+    td = table cell
+    we can use "table" divide left and right
+-->
