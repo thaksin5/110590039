@@ -1,19 +1,86 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main_style.css">
+ <style>
+table, th, td {
+  width: 1000px;
+  border:1px solid black;
+}
+
+.tr1 {
+    width: 500px;
+    border:1px solid black;  
+}
+
+</style>   
 </head>
+
 <body>
-<div class="container">
-  <img src="channels1_profile.jpg" usemap="#face" alt="Avatar" class="image" style="width:50">
-  <div class="middle">
-    <div class="text">John Doe</div>
-  </div>
-  <map name="face">
-    <area shape="poly" coords="63,31,110,31,113,52,101,84,76,84,62,52" href="another_webpage.html" target="_blank">
-  </map>
-</div>
-  
+
+<table id="myTABLE" style="background-color: lightblue;">
+  <tr style="background-color: Yellow;">
+    <th >Math</th>
+    <th>English</th>
+    <th>Programming</th>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>90</td>
+    <td>80</td>
+  </tr>
+
+  <tr>
+    <td>60</td>
+    <td>90</td>
+    <td>80</td>
+  </tr>
+
+</table>
+
+<p>Change table width</p>
+
+<button type="button" onclick= "changeWidth1()"> 200px</button>
+<button type="button" onclick= "changeWidth2()"> 500px</button>
+
+<p>Change border widtg</p>
+
+<button type="button" onclick= "changeBorderwidth1()"> 1px</button>
+<button type="button" onclick= "changeBorderwidth2()"> 10px</button>
+<p>Change the colour</p>
+
+<button type="button" onclick= "changeColorR()"> Red</button>
+<button type="button" onclick= "changeColorB()"> Blue</button>
+<button type="button" onclick= "changeColorG()"> Green</button>
+<p>Reset</p>
+
+<button type="button" onclick= "Reset()"> Reset</button>
+<script>
+	function changeWidth1(){
+		document.getElementById("myTABLE").style.width = "200px";
+	}
+	function changeWidth2(){
+		document.getElementById("myTABLE").style.width = "500px";
+	}
+	function changeBorderwidth1(){
+		document.getElementById("myTABLE").style.borderWidth= "1px";
+	}
+	function changeBorderwidth2(){
+		document.getElementById("myTABLE").style.borderWidth= "10px";
+	}
+	function changeColorR(){
+		document.getElementById("myTABLE").style.backgroundColor = "Red";
+	}
+	function changeColorB(){
+		document.getElementById("myTABLE").style.backgroundColor = "Blue";
+	}
+	function changeColorG(){
+		document.getElementById("myTABLE").style.backgroundColor = "Green";
+	}
+	function Reset(){
+		document.getElementById("myTABLE").style.backgroundColor = "lightblue";
+		document.getElementById("myTABLE").style.borderWidth= "1px";
+		document.getElementById("myTABLE").style.width = "1000px";
+}
+</script>
+
 </body>
 </html>
