@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Game</title>
+    </head>
+    <body>
+        <canvas id="gameCanvas" width="400" height="300"></canvas>
+        <script>
+            const FPS = 60;
+            var rect_size = 40;
+            var rect1_x, rect1_y;
+            var velo1_x, velo1_y;
+            var rect2_x, rect2_y;
+            var velo2_x, velo2_y;
+            var rect3_x, rect3_y;
+            var velo3_x, velo3_y;
+            var canvas, context; 
+
+            // load canvas
+            canvas = document.getElementById("gameCanvas");
+            context = canvas.getContext("2d");
+            // game loop
+            setInterval(update, 1000/FPS);
+
+            // ball start position
+            rect1_x = 0;
+            rect1_y = 30;
+            rect2_x = 0 / 2;
+            rect2_y = 30 / 2;
+            rect3_x = 0;
+            rect3_y = 80;
+
+            // ball velocity
+            velo1_x = Math.floor(Math.random() * 76 + 25) / FPS;
+            velo1_y = Math.floor(Math.random() * 76 + 25) / FPS;
+            velo2_x = Math.floor(Math.random() * 76 + 25) / FPS;
+            velo2_y = Math.floor(Math.random() * 76 + 25) / FPS;
+            velo3_x = 100 / FPS;
+
+            // random ball direction
+            if(Math.floor(Math.random()*2)==0){
+                velo1_x = -velo1_x;
+                velo2_x = -velo2_x;
+            }
+            if(Math.floor(Math.random()*2)==0){
+                velo1_y = -velo1_y;
+                velo2_y = -velo2_y;
+            }
+
+            function update(){
+                //move the ball
+                rect1_x += velo1_x;
+                rect1_y += velo1_y;
+                rect2_x += velo2_x;
+                rect2_y += velo2_y;
+                rect3_x += velo3_x;
+
+                //bounce the ball
+                if(rect1_x-rect_size/2 < 0 && velo1_x<0){
+                    velo1_x = -velo1_x;
+                }
+                if(rect2_x-rect_size/2 < 0 && velo2_x<0){
+                    velo2_x = -velo2_x;
+                }
+                if(rect3_x-rect_size/2 < 0 && velo3_x<0){
+                    velo3_x = -velo3_x;
+                }
+                
+
+                if(rect1_x+rect_size/2 > canvas.width && velo1_x>0){
+                    velo1_x = -velo1_x;
+                }
+                if(rect2_x+rect_size/2 > canvas.width && velo2_x>0){
+                    velo2_x = -velo2_x;
+                }
+                if(rect3_x+rect_size/2 > canvas.width && velo3_x>0){
+                    velo3_x = -velo3_x;
+                }
+                if(rect1_y-velo1_y/2 < 0 && velo1_y<0){
+                    velo1_y = -velo1_y;
+                }
+                if(rect2_y-velo2_y/2 < 0 && velo2_y<0){
+                    velo2_y = -velo2_y;
+                }
+                if(rect1_y+rect_size/2>canvas.height && velo1_y> 0){
+                    velo1_y = -velo1_y;
+                }
+                if(rect2_y+rect_size/2>canvas.height && velo2_y> 0){
+                    velo2_y = -velo2_y;
+                }
+
+                
+
+
+                //draw background of each wall
+                context.fillStyle = "black";
+                context.fillRect(0, 0, canvas.width, canvas.height);
+                context.fillStyle = "yellow";
+                context.fillRect(rect1_x-rect_size/2, rect1_y-rect_size/2, rect_size, rect_size);
+                context.fillStyle = "blue";
+                context.fillRect(rect2_x-rect_size/2, rect2_y-rect_size/2, rect_size, rect_size);
+                context.fillStyle = "red";
+                context.fillRect(rect3_x-rect_size/2, rect3_y-rect_size/2, rect_size, rect_size);
+            }
+            
+        </script>
+    </body>
+</html>
